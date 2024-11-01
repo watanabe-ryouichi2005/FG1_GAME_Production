@@ -14,4 +14,7 @@ public:
 public:
 	Player* player_;
 	// Enemy* enemy_;
+
+	//テクスチャーハンドル
+	int groundSprite_;
 };

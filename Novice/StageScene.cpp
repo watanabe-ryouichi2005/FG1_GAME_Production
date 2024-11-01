@@ -1,5 +1,6 @@
 #include "StageScene.h"
 #include "Player.h"
+
 #include <Novice.h>
 #include <math.h>
 
@@ -10,6 +11,7 @@ StageScene::~StageScene() {
 
 void StageScene::Init() {
 	player_ = new Player({1920 / 2, 1080 / 2}, 24, 3);
+	groundSprite_ = Novice::LoadTexture("./GameResources/GroundSprit.png");
 	// enemy_ = new Enemy({100, 300}, 3, 16, true);
 }
 
@@ -30,7 +32,8 @@ void StageScene::Update(char* keys, char* preKeys) {
 }
 
 void StageScene::Draw() {
-	Novice::DrawBox(0, 0, 1920, 1080, 0.0f, 0x00000064, kFillModeSolid);
+	//Novice::DrawBox(0, 0, 1920, 1080, 0.0f, 0x00000064, kFillModeSolid);
+	Novice::DrawSprite(0, 0, groundSprite_, 1.0f, 1.0f, 0.0f, WHITE);
 	player_->Draw();
 	// enemy_->Draw();
 }
