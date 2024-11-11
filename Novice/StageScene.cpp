@@ -12,6 +12,7 @@ StageScene::~StageScene() {
 void StageScene::Init() {
 	player_ = new Player({1920 / 2, 1080 / 2}, 24, 3);
 	groundSprite_ = Novice::LoadTexture("./GameResources/GroundSprit.png");
+
 	// enemy_ = new Enemy({100, 300}, 3, 16, true);
 }
 

@@ -8,12 +8,13 @@ void TitleScene::Init() {
 void TitleScene::Update(char* keys, char* preKeys) {
 	if (!preKeys[DIK_RETURN] && keys[DIK_RETURN]) {
 		sceneNo = STAGE;
+
 	}
 }
 
-void TitleScene::Draw() { 
+void TitleScene::Draw() {  
 
-	Novice::DrawSprite(0, 0, titleSprite_, 1.0f, 1.0f, 0.0f, WHITE);
+	Novice::DrawSprite(0, 0, titleSprite_,   1.0f, 1.0f, 0.0f, 0x000000);
 
 
 }

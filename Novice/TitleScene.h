@@ -7,7 +7,8 @@ public:
 	void Update(char* keys, char* preKeys) override;
 	void Draw() override;
 
-private:
+public:
 	//テクスチャーハンドル
-	int titleSprite_;
+	int titleSprite_ ;
+
 };
