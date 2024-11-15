@@ -18,7 +18,8 @@ public:
 private:
 	// keeps track of the scenes
 	std::unique_ptr<IScene> sceneArr_[3];
-
+	//今のシーン
 	int currentSceneNo_;
+
 	int prevSceneNo_;
 };

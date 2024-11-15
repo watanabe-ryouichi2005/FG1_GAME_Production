@@ -7,6 +7,7 @@ void TitleScene::Init() {
 
 void TitleScene::Update(char* keys, char* preKeys) {
 	if (!preKeys[DIK_RETURN] && keys[DIK_RETURN]) {
+
 		sceneNo = STAGE;
 
 	}

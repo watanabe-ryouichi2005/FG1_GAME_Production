@@ -11,6 +11,7 @@ GameManager::GameManager() {
 GameManager::~GameManager() {}
 
 int GameManager::Run(char* keys, char* preKeys) {
+	sceneArr_[currentSceneNo_]->Init();
 	while (Novice::ProcessMessage() == 0) {
 
 		Novice::BeginFrame();
@@ -21,6 +22,7 @@ int GameManager::Run(char* keys, char* preKeys) {
 		currentSceneNo_ = sceneArr_[currentSceneNo_]->GetSceneNo();
 
 		if (prevSceneNo_ != currentSceneNo_) {
+
 			sceneArr_[currentSceneNo_]->Init();
 		}
 
