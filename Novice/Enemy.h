@@ -1,17 +1,24 @@
 #pragma once
+#define _USE_MATH_DEFINES
 #include "Vector2.h"
-#include <stdlib.h>
-#include<random>
+#include <math.h>
+
 class Enemy {
 public:
-	void Init();
+	Enemy(Vector2 pos, int s, int r, int isAlive);
 	void Update();
 	void Draw();
-
-private:
-
-	Vector2 posx_,posy_;
-
-
-
+	void Position();
+	float GetX();
+	float GetY();
+	float GetRadius();
+public:
+	int maxX;
+	int minX;
+	int randPosX_;
+	Vector2 pos_;
+	int enemyTex;
+	int speed_;
+	int radius_;
+	bool isAlive_;
 };

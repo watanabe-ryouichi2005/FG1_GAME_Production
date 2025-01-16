@@ -1,15 +1,24 @@
 #pragma once
+#include "Bullet.h"
 #include "Vector2.h"
 
 class Player {
 public:
-	Vector2 pos_;
-	int radius_;
-	int speed_;
-
-public:
-	Player(Vector2 pos, int radius, int speed);
+	Player(Vector2 pos, float speed);
 	~Player();
 	void Update(char* keys, char* preKeys);
 	void Draw();
+	float GetX();
+	float GetY();
+	float GetRadius();
+
+
+public:
+	Bullet* bullet_[32];
+	Vector2 pos_;
+
+	float speed_;
+	int bulletTime_ = 10;
+	int playerTexture_;
+	bool hitBox_ = true;
 };
